@@ -62,3 +62,9 @@ Runtime options include:
 - `python-2.7.14`
 - `pypy-5.7.1` (unsupported, experimental)
 - `pypy3-5.5.1` (unsupported, experimental)
+
+
+Customization in China Mainland
+------------------------
+- The pip installation source is changed to Aliyun mirror
+- All files from Amazon AWS are moved to Aliyun OSS
