@@ -4,6 +4,9 @@ set +e
 runtime-fixer runtime.txt
 PYTHON_VERSION=$(cat runtime.txt)
 
+# The location of the pre-compiled python binary.
+VENDORED_PYTHON="${VENDOR_URL}/runtimes/$PYTHON_VERSION.tar.gz"
+
 if [[ $PYTHON_VERSION =~ ^python-2 ]]; then
   if [[ "$PYTHON_VERSION" != "$LATEST_2" ]]; then
     puts-warn "The latest version of Python 2 is $LATEST_2 (you are using $PYTHON_VERSION, which is unsupported)."
@@ -63,10 +66,11 @@ if [ "$FRESH_PYTHON" ] || [[ ! $(pip --version) == *$PIP_UPDATE* ]]; then
   puts-step "Installing pip"
 
   # Remove old installations.
-  rm -fr /app/.heroku/python/lib/python2.7/site-packages/pip-*
-  rm -fr /app/.heroku/python/lib/python2.7/site-packages/setuptools-*
+  rm -fr /app/.heroku/python/lib/python*/site-packages/pip-*
+  rm -fr /app/.heroku/python/lib/python*/site-packages/setuptools-*
 
   /app/.heroku/python/bin/python "$ROOT_DIR/vendor/get-pip.py" &> /dev/null
+  /app/.heroku/python/bin/pip install "$ROOT_DIR/vendor/setuptools-39.0.1-py2.py3-none-any.whl" &> /dev/null
 
 fi
 

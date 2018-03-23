@@ -1,12 +1,49 @@
 # Python Buildpack Changelog
 
+# 132
+
+Improve pip installation, with the release of v9.0.2.
+
+# 131
+
+Fix bug with pip.
+
+# 130
+
+Better upgrade strategy for pip.
+
+# 129
+
+Don't upgrade pip (from v128).
+
+# 128
+
+Upgrade pip, pin to Pipenv v11.8.2.
+
+# 127
+
+Pin to Pipenv v11.7.1.
+
+# 126
+
+Bugfixes.
+
+# 125
+
+Bugfixes.
+
 # 124
 
-Update buildpack to automatically install [dev-packages] (Pipenv) during Heroku CI builds.
+Update buildpack to automatically install `[dev-packages]` during Heroku CI Pipenv builds.
+
+- Skip installs if Pipfile.lock hasn't changed, and uninstall stale dependencies with Pipenv.
+- Set `PYTHONPATH` during collectstatic runs.
+- No longer warn if there is no `Procfile`.
+- Update Pipenv's "3.6" runtime specifier to point to "3.6.4".
 
 # 123
 
-Update gunicorn init.d script to allow overrides.
+Update gunicorn `init.d` script to allow overrides.
 
 # 122
 
@@ -18,7 +55,7 @@ Update default Python to v3.6.3.
 
 # 120
 
-Use Pipenv --deploy.
+Use `$ pipenv --deploy`.
 
 # 119
 
