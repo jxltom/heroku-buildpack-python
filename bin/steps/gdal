@@ -10,7 +10,7 @@
 # This script is invoked by [`bin/compile`](/).
 
 # The location of the pre-compiled cryptography binary.
-VENDORED_GDAL="http://wj-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/libraries/vendor/gdal.tar.gz"
+VENDORED_GDAL="http://wj-backend.oss-cn-hongkong.aliyuncs.com/heroku/lang-python/$STACK/libraries/vendor/gdal.tar.gz"
 
 PKG_CONFIG_PATH="/app/.heroku/vendor/lib/pkgconfig:$PKG_CONFIG_PATH"
 
