@@ -15,7 +15,7 @@ if [[ "$STACK" != "cedar-14" ]]; then
 fi
 
 # The location of the pre-compiled libmemcached binary.
-VENDORED_MEMCACHED="http://helmsman-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/libraries/vendor/libmemcache.tar.gz"
+VENDORED_MEMCACHED="http://wj-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/libraries/vendor/libmemcache.tar.gz"
 
 # Syntax sugar.
 # shellcheck source=bin/utils

@@ -44,13 +44,13 @@ if [ ! "$SKIP_INSTALL" ]; then
 
     mcount "version.python.$PYTHON_VERSION"
 
-    echo "http://helmsman-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz is being downloaded..."
-    if ! curl "http://helmsman-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz" -s | tar zxv -C .heroku/python &> /dev/null; then
+    echo "http://wj-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz is being downloaded..."
+    if ! curl "http://wj-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz" -s | tar zxv -C .heroku/python &> /dev/null; then
       puts-warn "Requested runtime ($PYTHON_VERSION) is not available for this stack ($STACK)."
       puts-warn "Aborting.  More info: https://devcenter.heroku.com/articles/python-support"
       exit 1
     fi
-    echo "http://helmsman-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz is downloaded successfully"
+    echo "http://wj-backend.oss-cn-shenzhen.aliyuncs.com/heroku/lang-python/$STACK/runtimes/$PYTHON_VERSION.tar.gz is downloaded successfully"
 
   # Record for future reference.
   echo "$PYTHON_VERSION" > .heroku/python-version
