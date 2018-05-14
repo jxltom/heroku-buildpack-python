@@ -12,7 +12,7 @@ testPipenvLock() {
 
 testPipenvVersion() {
   compile "pipenv-version"
-  assertCaptured "3.6.4"
+  assertCaptured "3.6.5"
   assertCapturedSuccess
 }
 
@@ -77,13 +77,19 @@ testPylibmc() {
 
 testPython2() {
   compile "python2"
-  assertCaptured "python-2.7.14"
+  assertCaptured "python-2.7.15"
   assertCapturedSuccess
 }
 
 testPython3() {
   compile "python3"
-  assertCaptured "python-3.6.4"
+  assertCaptured "python-3.6.5"
+  assertCapturedSuccess
+}
+
+testGitEgg() {
+  compile "git-egg"
+  assertCaptured "requests"
   assertCapturedSuccess
 }
 
