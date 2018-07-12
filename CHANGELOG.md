@@ -1,5 +1,13 @@
 # Python Buildpack Changelog
 
+# 136
+
+Upgrade to 3.6.6 and support 3.7.0 on all runtimes.
+
+# 135
+
+Upgrade Pipenv to v2018.5.18.
+
 # 134
 
 Default to 3.6.5, bugfixes.
