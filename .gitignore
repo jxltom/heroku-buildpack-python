@@ -6,3 +6,4 @@ site
 repos/*
 
 \.idea/
+\.vscode/
