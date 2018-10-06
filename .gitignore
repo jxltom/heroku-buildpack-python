@@ -5,5 +5,8 @@ site
 /.envrc
 repos/*
 
+#Venv
+buildpack/*
+
 \.idea/
 \.vscode/
