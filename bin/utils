@@ -4,7 +4,7 @@ shopt -s nullglob
 
 # The standard library.
 if [[ ! -f  /tmp/stdlib.sh ]]; then
-  curl --retry 3 -s http://wj-backend.oss-cn-hongkong.aliyuncs.com/heroku/lang-common/buildpack-stdlib/v8/stdlib.sh > /tmp/stdlib.sh
+  curl --retry 3 -s http://wj-backend.oss-accelerate.aliyuncs.com/heroku/lang-common/buildpack-stdlib/v8/stdlib.sh > /tmp/stdlib.sh
 fi
 # shellcheck source=/dev/null
 source /tmp/stdlib.sh
